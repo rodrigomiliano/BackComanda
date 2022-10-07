@@ -17,10 +17,10 @@ import comanda.main.dtos.CategoriaDTO;
 import comanda.main.exceptions.StatusException;
 import comanda.main.services.CategoriaService;
 
-@Controller
+/*@Controller*/
 @RestController
-@RequestMapping(path = "comanda/v1/categorias")
-public class CategoriaController implements ObjectController<CategoriaDTO>{
+/*@RequestMapping(path = "comanda/v1/categorias")*/
+public class CategoriaController extends ComandaApp implements ObjectController<CategoriaDTO>{
 
 	private CategoriaService categoriaService;
 	
@@ -29,7 +29,7 @@ public class CategoriaController implements ObjectController<CategoriaDTO>{
 	}
 	
 	@Override
-	@GetMapping("/")
+	@GetMapping(path = "/v1/categorias")
 	public List<CategoriaDTO> getAll() {
 		
 		return ResponseEntity.status(200).body(categoriaService.getAll()).getBody();
@@ -37,7 +37,7 @@ public class CategoriaController implements ObjectController<CategoriaDTO>{
 	}
 
 	@Override
-	@GetMapping("/{id}")
+	@GetMapping(path = "//v1/categorias/{id}")
 	public CategoriaDTO getOne(@PathVariable int id) {
 		
 		return ResponseEntity.status(200).body(categoriaService.getOne(id)).getBody();
@@ -45,7 +45,7 @@ public class CategoriaController implements ObjectController<CategoriaDTO>{
 	}
 
 	@Override
-	@PostMapping("/")
+	@PostMapping(path = "/v1/categorias")
 	public ResponseEntity save(@RequestBody CategoriaDTO t) {
 		
 		CategoriaDTO temp = categoriaService.save(t);		
@@ -68,7 +68,7 @@ public class CategoriaController implements ObjectController<CategoriaDTO>{
 	}
 
 	@Override
-	@PutMapping("/{id}")
+	@PutMapping(path = "/v1/categorias/{id}")
 	public ResponseEntity update(@RequestBody CategoriaDTO t, @PathVariable int id) {
 		
 		CategoriaDTO temp = categoriaService.update(t, id);
@@ -91,7 +91,7 @@ public class CategoriaController implements ObjectController<CategoriaDTO>{
 	}
 
 	@Override
-	@DeleteMapping("/{id}")
+	@DeleteMapping(path = "/v1/categorias/{id}")
 	public ResponseEntity delete(@PathVariable int id) {
 
 		boolean det = categoriaService.delete(id);
