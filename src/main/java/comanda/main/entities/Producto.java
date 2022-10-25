@@ -1,10 +1,19 @@
 package comanda.main.entities;
 
+import java.util.Optional;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -24,6 +33,14 @@ public class Producto {
 	
 	@Column(name = "producto_precio")
 	private double precio;
+			
+	@ManyToOne(targetEntity = Categoria.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@JoinColumn(name="categoria_id", referencedColumnName="categoria_id", nullable = false)
+	private Categoria categoria;
+	
+	@ManyToOne(targetEntity = Etiqueta.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@JoinColumn(name="etiqueta_id", referencedColumnName="etiqueta_id", nullable = false)
+	private Etiqueta etiqueta;
 	
 		
 	public Producto(String nombre, String descripcion, double precio) {
@@ -66,6 +83,15 @@ public class Producto {
 
 	public void setPrecio(double precio) {
 		this.precio = precio;
+	}
+	
+	public void getCategoria(Categoria categoria) {
+		
+	}
+
+	public void setCategoria(Categoria findById) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

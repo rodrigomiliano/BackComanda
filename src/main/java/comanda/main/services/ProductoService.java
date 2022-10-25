@@ -7,13 +7,16 @@ import java.util.Optional;
 import org.springframework.stereotype.Service;
 
 import comanda.main.dtos.ProductoDTO;
+import comanda.main.entities.Categoria;
 import comanda.main.entities.Producto;
+import comanda.main.repositories.CategoriaRepository;
 import comanda.main.repositories.ProductoRepository;
 
 @Service
 public class ProductoService implements ObjectService<ProductoDTO> {
 
 	private ProductoRepository productoRepository;
+	private CategoriaRepository categoriaRepository;
 	
 	public ProductoService(ProductoRepository productoRepository) {
 		this.productoRepository = productoRepository;
@@ -70,6 +73,11 @@ public class ProductoService implements ObjectService<ProductoDTO> {
 		producto.setNombre(t.getNombre());
 		producto.setDescripcion(t.getDescripcion());
 		producto.setPrecio(t.getPrecio());
+		Optional<Categoria> categoria = categoriaRepository.findById(t.getCategoriaId());
+		if (categoria.isPresent()) {
+			producto.setCategoria(categoria.get());	
+		}
+		
 				
 		try {
 			

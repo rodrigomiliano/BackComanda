@@ -8,6 +8,8 @@ public class ProductoDTO implements Serializable{
 	private String nombre;
 	private String descripcion;
 	private double precio;
+	private Integer categoriaId;  
+	private Integer etiquetaId;
 	
 	public ProductoDTO(String nombre, String descripcion, double precio) {
 		this.nombre = nombre;
@@ -49,5 +51,10 @@ public class ProductoDTO implements Serializable{
 
 	public void setPrecio(double precio) {
 		this.precio = precio;
+	}
+
+	public Integer getCategoriaId() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
