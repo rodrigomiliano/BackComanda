@@ -29,7 +29,7 @@ public class ProductoController extends ComandaApp implements ObjectController<P
 		this.productoService = productoService;
 	}
 	
-	@CrossOrigin(origins = "http://localhost:3000")
+	
 	@Override
 	@GetMapping(path = "/v1/productos")
 	public List<ProductoDTO> getAll() {

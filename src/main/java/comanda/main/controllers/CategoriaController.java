@@ -29,7 +29,7 @@ public class CategoriaController extends ComandaApp implements ObjectController<
 		this.categoriaService = categoriaService;
 	}
 	
-	@CrossOrigin(origins = "http://localhost:3000")
+	
 	@Override
 	@GetMapping(path = "/v1/categorias")
 	public List<CategoriaDTO> getAll() {

@@ -29,7 +29,7 @@ public class EtiquetaController extends ComandaApp implements ObjectController<E
 		this.etiquetaService = etiquetaService;
 	}
 	
-	@CrossOrigin(origins = "http://localhost:3000")
+	
 	@Override
 	@GetMapping(path = "/v1/etiquetas")
 	public List<EtiquetaDTO> getAll() {
