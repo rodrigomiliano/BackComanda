@@ -9,8 +9,7 @@ public class ProductoDTO implements Serializable{
 	private String descripcion;
 	private double precio;
 	private Integer categoriaId;  
-	private Integer etiquetaId;
-	
+		
 	public ProductoDTO(String nombre, String descripcion, double precio) {
 		this.nombre = nombre;
 		this.descripcion = descripcion;

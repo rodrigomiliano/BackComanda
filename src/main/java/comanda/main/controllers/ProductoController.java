@@ -20,7 +20,7 @@ import comanda.main.services.ProductoService;
 
 /*@Controller*/
 @RestController
-/*@RequestMapping(path = "comanda/v1/categorias")*/
+/*@RequestMapping(path = "comanda/v1/productos")*/
 public class ProductoController extends ComandaApp implements ObjectController<ProductoDTO>{
 
 	private ProductoService productoService;

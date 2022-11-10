@@ -38,10 +38,6 @@ public class Producto {
 	@JoinColumn(name="categoria_id", referencedColumnName="categoria_id", nullable = false)
 	private Categoria categoria;
 	
-	@ManyToOne(targetEntity = Etiqueta.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	@JoinColumn(name="etiqueta_id", referencedColumnName="etiqueta_id", nullable = false)
-	private Etiqueta etiqueta;
-	
 		
 	public Producto(String nombre, String descripcion, double precio) {
 		this.nombre = nombre;
