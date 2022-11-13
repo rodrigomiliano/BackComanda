@@ -2,6 +2,8 @@ package comanda.main.dtos;
 
 import java.io.Serializable;
 
+import comanda.main.entities.Categoria;
+
 public class ProductoDTO implements Serializable{
 
 	private int id;
@@ -53,7 +55,10 @@ public class ProductoDTO implements Serializable{
 	}
 
 	public Integer getCategoriaId() {
-		// TODO Auto-generated method stub
-		return null;
+		return categoriaId;
+	}
+	
+	public void setCategoriaId(Categoria categoria) {
+		this.categoriaId = categoria.getId();
 	}
 }

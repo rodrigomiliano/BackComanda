@@ -7,6 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/*Las Entities son las que tienen el modelo de negocio y los métodos que auyudan a representarlo*/
 @Entity
 @Table(name = "comandabd_categoria")
 public class Categoria {

@@ -21,6 +21,7 @@ import comanda.main.services.CategoriaService;
 /*@Controller*/
 @RestController
 /*@RequestMapping(path = "comanda/v1/categorias")*/
+/*Recibe y envia datos*/
 public class CategoriaController extends ComandaApp implements ObjectController<CategoriaDTO>{
 
 	private CategoriaService categoriaService;

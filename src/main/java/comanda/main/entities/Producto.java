@@ -42,7 +42,7 @@ public class Producto {
 	public Producto(String nombre, String descripcion, double precio) {
 		this.nombre = nombre;
 		this.descripcion = descripcion;	
-		this.precio = precio;
+		this.precio = precio;		
 	}
 	
 	public Producto() {
@@ -81,12 +81,12 @@ public class Producto {
 		this.precio = precio;
 	}
 	
-	public void getCategoria(Categoria categoria) {
-		
+	public Categoria getCategoria() {
+		return categoria;
 	}
 
 	public void setCategoria(Categoria findById) {
-		// TODO Auto-generated method stub
+		this.categoria = findById;
 		
 	}
 	

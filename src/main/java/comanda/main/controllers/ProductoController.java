@@ -39,7 +39,7 @@ public class ProductoController extends ComandaApp implements ObjectController<P
 	}
 
 	@Override
-	@GetMapping(path = "//v1/productos/{id}")
+	@GetMapping(path = "/v1/productos/{id}")
 	public ProductoDTO getOne(@PathVariable int id) {
 		
 		return ResponseEntity.status(200).body(productoService.getOne(id)).getBody();

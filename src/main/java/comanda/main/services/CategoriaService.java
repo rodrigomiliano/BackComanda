@@ -11,6 +11,7 @@ import comanda.main.entities.Categoria;
 import comanda.main.repositories.CategoriaRepository;
 
 @Service
+/*Esta interfaz nos indica que métodos hay que usar (getNombre, getDesc)*/
 public class CategoriaService implements ObjectService<CategoriaDTO> {
 
 	private CategoriaRepository categoriaRepository;
@@ -24,7 +25,7 @@ public class CategoriaService implements ObjectService<CategoriaDTO> {
 		
 		List<CategoriaDTO> result = new ArrayList<>();
 		
-		for(Categoria categoria : categoriaRepository.findAll()) {
+		for(Categoria categoria : categoriaRepository.findAll())/*trae todos los datos y los inyecta en un array*/ {
 			CategoriaDTO temp = new CategoriaDTO();
 			temp.setId(categoria.getId());
 			temp.setNombre(categoria.getNombre());
