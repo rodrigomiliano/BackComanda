@@ -55,7 +55,7 @@ public class ProductoService implements ObjectService<ProductoDTO> {
 			temp.setNombre(producto.getNombre());
 			temp.setDescripcion(producto.getDescripcion());
 			temp.setPrecio(producto.getPrecio());		
-			
+			temp.setCategoriaId(producto.getCategoria());
 		} catch (Exception e) {
 
 			System.out.println("No existe el id");
