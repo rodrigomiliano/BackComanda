@@ -2,7 +2,7 @@ package comanda.main.dtos;
 
 import java.io.Serializable;
 
-/*DTO es un encapsulador, permite madnar info a través de la red, solo tiene los campos necesarios*/
+/*DTO es un encapsulador, permite mandar info a través de la red, solo tiene los campos necesarios*/
 /*Serializable: un atributo detrás de otro, y lo manda a través de la red*/
 public class CategoriaDTO implements Serializable{
 

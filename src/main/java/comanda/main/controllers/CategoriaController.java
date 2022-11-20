@@ -49,6 +49,7 @@ public class CategoriaController extends ComandaApp implements ObjectController<
 
 	@Override
 	@PostMapping(path = "/v1/categorias")
+	/*RequestBody es porque es un JSON que se envia a traves de la peticion*/
 	public ResponseEntity save(@RequestBody CategoriaDTO t) {
 		
 		CategoriaDTO temp = categoriaService.save(t);		
@@ -72,6 +73,7 @@ public class CategoriaController extends ComandaApp implements ObjectController<
 
 	@Override
 	@PutMapping(path = "/v1/categorias/{id}")
+	/*Por la URL lleva ID y por el Body lleva el DTO*/
 	public ResponseEntity update(@RequestBody CategoriaDTO t, @PathVariable int id) {
 		
 		CategoriaDTO temp = categoriaService.update(t, id);

@@ -12,10 +12,11 @@ public class ProductoDTO implements Serializable{
 	private double precio;
 	private Integer categoriaId;  
 		
-	public ProductoDTO(String nombre, String descripcion, double precio) {
+	public ProductoDTO(String nombre, String descripcion, double precio, Integer categoriaId) {
 		this.nombre = nombre;
 		this.descripcion = descripcion;
 		this.precio = precio;
+		this.categoriaId = categoriaId;
 	}
 	
 	public ProductoDTO() {

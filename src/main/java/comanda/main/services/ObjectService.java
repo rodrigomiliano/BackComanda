@@ -2,7 +2,7 @@ package comanda.main.services;
 
 import java.util.List;
 
-/*Esta interfaz nos indica que métodos hay que usar (getNombre, getDesc)*/
+/*Esta interfaz nos indica que métodos hay que usar (getAll, getOne, etc), es genérica*/
 public interface ObjectService <T> {
 
 	public List<T> getAll();

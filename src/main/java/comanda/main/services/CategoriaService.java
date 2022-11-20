@@ -40,7 +40,7 @@ public class CategoriaService implements ObjectService<CategoriaDTO> {
 	@Override
 	public CategoriaDTO getOne(int id) {
 		
-		Optional<Categoria> aOptional = categoriaRepository.findById(id);
+		Optional<Categoria> aOptional = categoriaRepository.findById(id);/*Puede devolver o no un objeto del tipo Categoria*/
 		
 		CategoriaDTO temp = new CategoriaDTO();
 		

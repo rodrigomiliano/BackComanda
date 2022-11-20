@@ -16,6 +16,9 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.databind.JsonDeserializer;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+
 @Entity
 @Table(name = "comandabd_producto")
 public class Producto {
@@ -36,7 +39,7 @@ public class Producto {
 			
 	@ManyToOne(targetEntity = Categoria.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinColumn(name="categoria_id", referencedColumnName="categoria_id", nullable = false)
-	private Categoria categoria;
+	private Categoria categoria_id;
 	
 		
 	public Producto(String nombre, String descripcion, double precio) {
@@ -82,11 +85,11 @@ public class Producto {
 	}
 	
 	public Categoria getCategoria() {
-		return categoria;
+		return categoria_id;
 	}
 
 	public void setCategoria(Categoria findById) {
-		this.categoria = findById;
+		this.categoria_id = findById;
 		
 	}
 	
