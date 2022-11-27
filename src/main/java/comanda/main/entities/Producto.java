@@ -41,7 +41,6 @@ public class Producto {
 	@JoinColumn(name="categoria_id", referencedColumnName="categoria_id", nullable = false)
 	private Categoria categoria_id;
 	
-		
 	public Producto(String nombre, String descripcion, double precio) {
 		this.nombre = nombre;
 		this.descripcion = descripcion;	
@@ -88,8 +87,8 @@ public class Producto {
 		return categoria_id;
 	}
 
-	public void setCategoria(Categoria findById) {
-		this.categoria_id = findById;
+	public void setCategoria(int categoria) {
+		this.categoria_id = categoria;
 		
 	}
 	

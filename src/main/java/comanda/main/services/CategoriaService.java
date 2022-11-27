@@ -75,7 +75,7 @@ public class CategoriaService implements ObjectService<CategoriaDTO> {
 			
 		} catch (Exception e) {
 			
-			System.out.println("Bad Request");
+			System.out.println("Bad Request CategoriaService");
 			
 		}
 		

@@ -60,6 +60,7 @@ public class ProductoDTO implements Serializable{
 	}
 	
 	public void setCategoriaId(Categoria categoria) {
+		System.out.println(categoria.getId());
 		this.categoriaId = categoria.getId();
 	}
 }

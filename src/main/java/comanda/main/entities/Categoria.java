@@ -22,7 +22,6 @@ public class Categoria {
 	
 	@Column(name = "categoria_descripcion")
 	private String descripcion;
-	
 		
 	public Categoria(String nombre, String descripcion) {
 		this.nombre = nombre;

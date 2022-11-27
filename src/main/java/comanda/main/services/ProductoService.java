@@ -76,6 +76,7 @@ public class ProductoService implements ObjectService<ProductoDTO> {
 		producto.setPrecio(t.getPrecio());
 		Optional<Categoria> categoria = categoriaRepository.findById(t.getCategoriaId());
 		if (categoria.isPresent()) {
+			System.out.println("¿Entra?");
 			producto.setCategoria(categoria.get());	
 		}
 		
@@ -86,7 +87,7 @@ public class ProductoService implements ObjectService<ProductoDTO> {
 			
 		} catch (Exception e) {
 			
-			System.out.println("Bad Request");
+			System.out.println("Bad Request ProductoService");
 			
 		}
 		
